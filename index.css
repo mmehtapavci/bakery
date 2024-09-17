@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(194, 193, 193, 0.349);
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: fixed;
+    font-size: 25px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    margin-left: 30px;
+}
+.list li {
+    margin: 0 15px;
+}
+.list li a:hover {
+    width: 100%;
+    border-bottom: 4px solid rgb(45, 46, 20);
+}
+
+/* Section 1 */
+.pricesection {
+    height: 950px;
+    background-image: url(Images/bread.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 130px;
+}
+.box {
+    width: 500px;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 40px;
+}
+h1 {
+    font-size: 50px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.prgone {
+    font-size: 22px;
+    color: white;
+}
+.btnone {
+    width: 200px;
+    background-color: #b47b48;
+    padding: 25px;
+    border-radius: 20px;
+    color: aliceblue;
+    border: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.box2 {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    border: 2px;
+    border-radius: 30px;
+    background-color: #202023;
+    margin: 100px;
+}
+.box2:hover {
+    animation-name: fade;
+    animation: fade 1s;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+@keyframes fade {
+    from {
+        background-color: #202023;
+    }
+
+    to {
+        background-color: rgb(212, 157, 76);
+    }
+}
+
+.btn {
+    margin-bottom: 40px;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.box2 {
+    margin: 4px;
+    display: flex;
+}
+
+.price {
+    height: 180px;
+    width: 100px;
+    color: aliceblue;
+    margin-top: 40px;
+
+}
+
+.img {
+    margin-top: 30px;
+}
+
+img {
+    width: 140px;
+}
+
+.btn {
+    background-color: #b47b48;
+    padding: 7px;
+    border-radius: 7px;
+    margin-top: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* MENÜ*/
+.black-box {
+    background-color: #202023;
+    color: #fff;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    text-align: center;
+    margin: 70px;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item p {
+    margin-top: 10px;
+}
+
+.kup {
+    width: 180px;
+    background-color: #b47b48;
+    padding: 20px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Section 3 */
+.botmenu {
+    background-color: black;
+    width: 100%;
+    height: 900px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/gfbvb.png);
+    background-repeat: repeat-x;
+}
+
+.align-container {
+    justify-content: space-around;
+    display: flex;
+    height: auto;
+}
+
+.align {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.align img {
+    height: auto;
+}
+
+#align2 {
+    margin-left: 500px;
+}
+
+#align3 {
+    margin-top: 430px;
+}
+
+.title {
+    text-align: center;
+}
+
+.caption {
+    width: 100%;
+    background-color: #837e7ee8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: 400
+}
+
+.menuimg {
+    height: auto;
+    width: 300px;
+}
+
+/* Section 4 */
+.section4 {
+    background-image: url(Images/bckgrd.jpeg);
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.why {
+    margin-left: 400px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.icon {
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 700px;
+    background-color: #202023;
+}
+
+.where {
+    margin-left: 300px;
+    width: 300px;
+}
+
+.smalldiv {
+    display: flex;
+    margin-left: 300px;
+}
+
+.how {
+    margin-left: 50px;
+    height: 50px;
+}
+
+.when {
+    margin-left: 150px;
+}
+.info {
+    display: flexbox;
+    margin-top: 100px;
+    margin-right: 100pxpx;
+
+}
