@@ -65,7 +65,7 @@ h1 {
     text-align: center;
 }
 .modal{
-    /* display: none; */
+    display: none;
     background-color: #202023bd;
     z-index: 1;
     position: fixed;
@@ -98,10 +98,6 @@ h1 {
     background-image: url(/image/breadmart.png);
     background-repeat: no-repeat;
 }
-
-
-
-
 
 /* section2 */
 .box2 {
