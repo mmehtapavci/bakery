@@ -111,6 +111,9 @@ h1 {
     left: 550px;
     top: 300px;
     display: flex;
+    /* Animasyon için başlangıç noktası */
+    transform: rotate(0deg);
+    transition: transform 0.6s ease-in-out;
 }
 .breadh1{
     color: #050505;
@@ -125,22 +128,81 @@ h1 {
     background-repeat: no-repeat;
 }
 /*******Modal pencere açık olduğu zaman */
-.modal-checkbox:checked + .modal{
-    display: flex;
+.modal-checkbox:checked + .modal {
+    display: flex; /* Modal açıldığında görünür */
+    opacity: 1; /* Tam opak */
+    transition: opacity 0.6s ease-in-out; /* Opaklık geçişi */
 }
-.modal-checkbox{
-    display: none;
+
+.modal-checkbox:checked + .modal .modal-content {
+    animation: rotateIn 0.6s forwards; /* Açılışta döndürme animasyonu */
 }
-/*********** Kapatma butonu */
-.close{
-    color: rgb(10, 27, 41);
-    position: absolute;
-    left: 750px;
-    top: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
+
+.modal-checkbox:not(:checked) + .modal .modal-content {
+    animation: rotateOut 0.6s forwards; /* Kapanışta döndürme animasyonu */
 }
+
+.modal-checkbox:not(:checked) + .modal {
+    opacity: 0; /* Kapanırken saydam olur */
+    visibility: hidden; /* Görünürlüğü kapanırken gizlenir */
+    transition: opacity 0.6s ease-in-out; /* Opaklık geçişi, animasyonla uyumlu */
+}
+
+.modal-checkbox {
+    display: none; /* Checkbox gizlenir */
+}
+
+/* Açılma animasyonu */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-180deg); /* 180 derece döndürülerek başlar */
+        opacity: 0; /* Tamamen saydam başlar */
+    }
+    to {
+        transform: rotate(0deg); /* Orijinal pozisyona döner */
+        opacity: 1; /* Tam opak hale gelir */
+    }
+}
+
+/* Kapanma animasyonu (tam kapanana kadar döner) */
+@keyframes rotateOut {
+    from {
+        transform: rotate(0deg); /* Kapanma animasyonu başlarken orijinal pozisyondadır */
+        opacity: 1; /* Tam opak başlar */
+    }
+    to {
+        transform: rotate(-360deg); /* 360 derece tam tur döner */
+        opacity: 0; /* Tamamen saydam olur */
+    }
+}
+
+/* Kapatma butonu */
+.close {
+    color: rgb(10, 27, 41); /* Kapatma butonunun rengi */
+    position: absolute; /* Butonun konumu */
+    left: 750px; /* Sol konum */
+    top: 20px; /* Üst konum */
+    font-weight: bold; /* Kalın yazı */
+    font-size: 20px; /* Yazı boyutu */
+    cursor: pointer; /* Fare işareti el olur */
+}
+
+/* Z-index ayarı */
+.modal {
+    z-index: 1000; /* Modal penceresi, diğer içeriklerin üzerinde olacak şekilde z-index değeri ayarlandı */
+}
+
+/* Kapatma butonu */
+.close {
+    color: rgb(10, 27, 41); /* Kapatma butonunun rengi */
+    position: absolute; /* Butonun konumu sayfaya göre sabitlenir */
+    left: 750px; /* Sol taraftan 750px uzakta konumlanır */
+    top: 20px; /* Üstten 20px uzakta konumlanır */
+    font-weight: bold; /* Yazı tipi kalın olur */
+    font-size: 20px; /* Yazı boyutu */
+    cursor: pointer; /* Üzerine gelindiğinde fare işareti el şeklini alır */
+}
+
 /********************* section2 */
 .box2 {
     width: 300px;
